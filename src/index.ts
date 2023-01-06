@@ -7,6 +7,8 @@ import {promises as fsPromises} from 'fs';
 const app = express();
 const port = 3000;
 
+console.log(__dirname);
+
 app.get('/api/images', logger, async(req, res) => {
     const endFile = req.hostname.replace('-3000', '');
     const width = req.query.width;
